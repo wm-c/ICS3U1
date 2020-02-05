@@ -18,6 +18,7 @@ repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -26,6 +27,7 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+    implementation 'com.github.ewpratten:libvec:v1.0.1'
 }
 
 application {

@@ -14,9 +14,9 @@ public class App {
 
         //Add the ubiquitous "Hello World" label.
         JLabel label = new JLabel("Hello World");
-        JLabel label2 = new JLabel("This is cringe af");
-        Menu menu1 = new Menu("JOE MAMA");
-        frame.getContentPane().add(label2);
+        
+        
+        // Menu menu1 = new Menu("JOE MAMA");
         // frame.getMenuBar().add(menu1);
         
 
