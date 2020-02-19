@@ -1,3 +1,5 @@
+// package RandomWords; this is what the package would be
+
 /**
  * William Meathrel
  * Period 3
@@ -12,7 +14,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class javaTest{
+public class RandomWords{
 
     // Creates a static instance of random
     public static Random random = new Random();
