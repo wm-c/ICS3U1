@@ -1,7 +1,7 @@
 # ICS3U1
 Repo for my class ICS3U1
 
-##Projects 
+## Projects 
 
 Currently I have a few Projects from my ICS3U1 class such as:
 * Random Word Generator
