@@ -3,6 +3,8 @@
  * William Meathrel 
  * January 19, 2020
  * Three Words
+ * NOTE: i've added the ability to select the amount of letter in a row, 
+ * this can be done adding and int to ThreeCharacterInput in ThreeWord
  */
 
 
