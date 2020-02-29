@@ -6,7 +6,7 @@ public class Player{
     public int y;
     private double xVel = 0;
     private double yVel = 10;
-    private int jumpCount = 10;
+    private int jumpCount = 30;
     public boolean jumpState = false;
     private final double xAccel = 1;
     private final double yAccel = -1;
@@ -26,12 +26,12 @@ public class Player{
     }
 
     public boolean Jump(){
-        if(jumpCount >= -10){
+        if(jumpCount >= -30){
             y += jumpCount * -1;
             jumpCount--;
             return true;
         }else{
-            jumpCount = 10;
+            jumpCount = 30;
             return false;
         }
         
