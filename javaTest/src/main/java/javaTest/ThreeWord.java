@@ -70,13 +70,7 @@ public class ThreeWord {
                 // sets count to zero
                 runningCharacter = threeCharacters.charAt(i) + "";
                 count = 0;
-            }
-            
-            
+            }     
         }
     }
-
-    
-
-
 }

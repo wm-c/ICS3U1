@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 
 public class sort{
-    private int length = 100000;
+    private int length = 10000;
     private int[] sortArray = new int[length];
     private Random random = new Random();
     public static void main(String[] args) {
@@ -33,6 +33,7 @@ public class sort{
                 
             }
         }
+        System.out.println("--------------------");
         System.out.println(Arrays.toString(sortArray));
         
     }
