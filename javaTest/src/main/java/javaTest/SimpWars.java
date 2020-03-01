@@ -12,6 +12,7 @@ public class SimpWars{
     int mouseX;
     int mouseY;
     boolean draw = false;
+    
     public static void main(String[] args) {
         
         new SimpWars();

@@ -11,28 +11,42 @@ public class Bullet{
     double rise;
     double bulletX;
     double bulletY;
+    int flightTime;
+    int bulletXSpeed;
 
     public Bullet(int startX, int startY, int targetX, int targetY){
-        this.bulletX = 0;
-        this.bulletY = 0;
-        this.startX = startX;
+        this.bulletX = startX;
+        this.bulletY = startY;
         this.startY = startY;
-        this.targetX = targetX;
-        this.targetY = targetY;
         this.rise = targetY - startY;
         this.run = targetX - startX;
         this.slope = rise / run;
         
+        if(slope < -10){
+            this.slope = -10;
+        }
+        if(slope > 10){
+            this.slope = 10;
+        }
+        if(targetX > startX){
+            bulletXSpeed = 5;
+        }
+        if(targetX < startX){
+            bulletXSpeed = -5;
+        }
+        this.flightTime = 0;
+        
+        
+        
     }
+
+
 
     public void BulletFlight(){
-        
-        this.bulletY = (this.slope * bulletX) + startY;
-        this.bulletX = startX+= 5;
-
+        this.bulletX += this.bulletXSpeed;
+        this.bulletY += this.slope * bulletXSpeed;
         
     }
-
 
 
 
