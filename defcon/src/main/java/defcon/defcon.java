@@ -17,7 +17,7 @@ public class defcon{
 
     private void init(){
         game = new JFrame();
-        g
+        
     }
 
 
