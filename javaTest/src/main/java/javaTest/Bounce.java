@@ -18,10 +18,7 @@ public class Bounce {
     int radius = 50;
     int xVel = 1;
     int yVel = 1;
-    ball ball1 = new ball(gc, xPos, yPos, radius, SW, SH);
-    ball ball2 = new ball(gc, xPos + 21, yPos + 21, radius, SW, SH);
-    private ball[] ballArray = {new ball(gc, xPos + 10, yPos + 10, radius, SW, SH),
-         new ball(gc, xPos + 25, yPos + 20, radius, SW, SH, -2, -4)};
+    BallRewrite ball1 = new BallRewrite(xPos, 700, gc);
 
     public Bounce(){
         Init();
@@ -43,9 +40,7 @@ public class Bounce {
     public void draw(){
         synchronized(gc){
             clear();
-            for (ball ball : ballArray) {
-                ball.run();
-            }
+            ball1.draw();
         
         }
         

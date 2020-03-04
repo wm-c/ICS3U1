@@ -6,13 +6,13 @@ import javaTest.Player;
 
 public class SimpWars{
 
-    GraphicsConsole gc = new GraphicsConsole(2000, 500, "SIMP WARS");
-    Player player = new Player(50, 450);
+    GraphicsConsole gc = new GraphicsConsole(2000, 400, "SIMP WARS");
+    Player player = new Player(50, 350);
     Bullet bullet;
     int mouseX;
     int mouseY;
     boolean draw = false;
-    
+    Wall wall = new Wall(gc, 100, 350,30,30);
     public static void main(String[] args) {
         
         new SimpWars();
@@ -22,6 +22,7 @@ public class SimpWars{
         
         Init(); 
         
+        System.out.println(CollisionIndex.getInstance().getWall(0).x);
         while(true){
             input();
             mouseX = gc.getMouseX();
@@ -34,17 +35,18 @@ public class SimpWars{
     public void draw() {
         synchronized(gc){
             gc.clear();
-            if(gc.getMouseClick() == 1){
-                draw = true;
-                bullet = new Bullet(player.x, player.y, mouseX, mouseY);
-            }
-            if(draw){
-                bullet.BulletFlight();
-                gc.fillOval((int) (bullet.bulletX), (int) (bullet.bulletY), 10, 10);
-            }
-            player.Movement();
-            
 
+            // if(gc.getMouseClick() == 1){
+            //     draw = true;
+            //     bullet = new Bullet(player.x, player.y, mouseX, mouseY);
+            // }
+            // if(draw){
+            //     bullet.BulletFlight();
+            //     gc.fillOval((int) (bullet.bulletX), (int) (bullet.bulletY), 10, 10);
+            // }
+            player.Movement();
+            Collision();
+            wall.Draw();
             gc.fillRect(player.x, player.y, 50, 50);
             
         }
@@ -72,6 +74,9 @@ public class SimpWars{
 
     }
 
+    public void Collision(){
+        
+    }
 
 
 

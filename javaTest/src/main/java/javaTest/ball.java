@@ -42,6 +42,7 @@ public class ball {
         
     }
 
+
     public void collision(){
         if(xPos >= SW - radius|| xPos == 0){
             xVel *= -1;

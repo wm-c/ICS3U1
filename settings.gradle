@@ -10,3 +10,4 @@
 rootProject.name = 'ICS3U1'
 include "javaTest"
 include "Actual Game"
+include "defcon"
