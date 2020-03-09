@@ -1,25 +1,46 @@
 package defcon;
 
-import javax.swing.JFrame;
-
+import ca.quarkphysics.hsa2.GraphicsConsole;
+import defcon.drawing.Background;
+import defcon.drawing.DrawCity;
 
 public class defcon{
 
-    public JFrame game;
+    GraphicsConsole gc;
+    private final int screenWidth = 700;
+    private final int screenHeight = 500;
+    public DrawCity london = new DrawCity(155, 125, true, 10000, "London");
 
     public static void main(String[] args) {
        new defcon();
     }
 
     public defcon(){
-        System.out.println("DEFCON 5");
-    }
-
-    private void init(){
-        game = new JFrame();
+        init();
+        while(true){
+            new Background(null).draw(gc);
+            draw();
+        }
         
     }
 
+    private void init(){
+        gc = new GraphicsConsole(screenWidth, screenHeight, "DEFCON");
+        gc.setAntiAlias(true);
+        gc.setLocationRelativeTo(null);
+        gc.addMouseMotionListener(gc);
+    }
+
+    public void draw(){
+        synchronized(gc){
+            london.draw(gc); 
+            System.out.println(gc.getMouseX());    
+        }   
+    }
+
+    
+
+    
 
     
 

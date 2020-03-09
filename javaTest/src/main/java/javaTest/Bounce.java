@@ -19,7 +19,7 @@ public class Bounce {
     int xVel = 1;
     int yVel = 1;
     BallRewrite ball1 = new BallRewrite(xPos, 700, gc);
-
+    BallRewrite ball2 = new BallRewrite(xPos, 700, false, .5, 1, true, gc);
     public Bounce(){
         Init();
         while(true){
@@ -41,6 +41,7 @@ public class Bounce {
         synchronized(gc){
             clear();
             ball1.draw();
+            ball2.draw();
         
         }
         
