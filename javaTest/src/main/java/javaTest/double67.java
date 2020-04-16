@@ -3,7 +3,7 @@ package javaTest;
 /**
  * @author William Meathrel
  * March 9, 2020
- * 
+ * ICS3U Mr. Harwood
  * Program that checks if two random numbers are the same
  * then prints out the amount of time it takes to get there.
  */
@@ -28,11 +28,11 @@ public class double67{
         while(true){
             randomNumber = random.nextInt(101);
             if(randomNumber == 67 && preNumber == 67){
-                System.out.println("true");
+                System.out.println(i);
                 break;
             }
             preNumber = randomNumber;
-            System.out.println(i);
+
             i++;
         }
         

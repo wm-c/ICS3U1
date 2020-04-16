@@ -27,6 +27,7 @@ public class SimpWars{
             input();
             mouseX = gc.getMouseX();
             mouseY = gc.getMouseY();
+            System.out.println(mouseX);
             gc.sleep(2);
             draw();
         }
